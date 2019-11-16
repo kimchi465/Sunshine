@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/gioi-thieu', function () {
+    return 'Hello, firtst route giới thiệu!';
+});
+
+Route::get('/lien-he', function () {
+    return 'Dia chi <h1>la...</h1>';
+});
