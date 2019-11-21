@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema; //Fix 1071 error
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,6 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);//Mặc định độ dài của chuỗi là 191 ký tự
         //
     }
 
