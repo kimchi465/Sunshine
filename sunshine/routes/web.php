@@ -28,3 +28,6 @@ Route::get('/test', function () {
     $data = DB::select('select * from loai');
     return $data;
 });
+
+Route::get('/hello', 'ExampleController@hello')->name('example.hello');
+Route::get('/gioithieubanthan', 'Example2Controller@gioithieubanthan')->name('example2.gioithieubanthan');
