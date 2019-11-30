@@ -31,3 +31,6 @@ Route::get('/test', function () {
 
 Route::get('/hello', 'ExampleController@hello')->name('example.hello');
 Route::get('/gioithieubanthan', 'Example2Controller@gioithieubanthan')->name('example2.gioithieubanthan');
+Route::get('/php', 'Example3Controller@php')->name('hoctap.php');
+Route::get('/laravel', 'Example3Controller@laravel')->name('hoctap.laravel');
+Route::get('/ngayhomnay', 'Example2Controller@ngayhomnay')->name('ngayhomnay');

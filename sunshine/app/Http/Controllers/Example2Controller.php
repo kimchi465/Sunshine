@@ -12,8 +12,8 @@ class Example2Controller extends Controller
         return view('gioithieubanthan');
     }
 
-    // public function hoctap()
-    // {
-
-    // }
+    public function ngayhomnay()
+    {
+        return view('ngayhomnay');
+    }
 }
