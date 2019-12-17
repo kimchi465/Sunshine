@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use CarbonCarbon;
 
 class Sanpham extends Model
 {
@@ -16,4 +17,14 @@ class Sanpham extends Model
 
     protected $dates    = ['sp_taoMoi', 'sp_capNhat'];
     protected $dataFormat   = 'Y-m-d H:i:s';
+
+    public function loaisanpham()
+    {
+        return $this->belongsTo('App\Loai', 'l_ma', 'l_ma');
+    }
+    public function hinhanhlienquan()
+    {
+        return $this->hasMany('App\HinhAnh', 'sp_ma', 'sp_ma');
+    }
 }
+

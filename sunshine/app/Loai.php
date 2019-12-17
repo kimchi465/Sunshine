@@ -16,4 +16,9 @@ class Loai extends Model
 
     protected $dates    = ['l_taoMoi', 'l_capNhat']; //Carbon
     protected $dateFormat   = 'Y-m-d H:i:s';
+
+    public function sanPhams()
+    {
+        return $this->hasMany('App\SanPham', 'l_ma', 'l_ma');
+    }
 }

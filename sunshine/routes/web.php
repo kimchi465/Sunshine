@@ -34,3 +34,5 @@ Route::get('/gioithieubanthan', 'Example2Controller@gioithieubanthan')->name('ex
 Route::get('/php', 'Example3Controller@php')->name('hoctap.php');
 Route::get('/laravel', 'Example3Controller@laravel')->name('hoctap.laravel');
 Route::get('/ngayhomnay', 'Example2Controller@ngayhomnay')->name('ngayhomnay');
+
+Route::resource('/admin/danhsachsanpham', 'SanPhamController');

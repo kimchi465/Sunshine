@@ -1,0 +1,8 @@
+.main-content{
+    margin-top: 64px;
+}
+/* CSS selector*/
+.sidebar > .active{
+    border: 1px solid red;
+    
+}
