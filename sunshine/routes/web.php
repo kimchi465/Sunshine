@@ -35,4 +35,8 @@ Route::get('/php', 'Example3Controller@php')->name('hoctap.php');
 Route::get('/laravel', 'Example3Controller@laravel')->name('hoctap.laravel');
 Route::get('/ngayhomnay', 'Example2Controller@ngayhomnay')->name('ngayhomnay');
 
-Route::resource('/admin/danhsachsanpham', 'SanPhamController');
+Route::get('/admin/danhsachsanpham/print', 'SanPhamController@print')->name('danhsachsanpham.print'); //truoc
+Route::get('/admin/danhsachsanpham/excel', 'SanPhamController@excel')->name('danhsachsanpham.excel');
+
+Route::resource('/admin/danhsachsanpham', 'SanPhamController'); //sau: /danhsachsanpham/...
+
