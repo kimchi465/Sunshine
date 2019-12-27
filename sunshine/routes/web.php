@@ -37,6 +37,11 @@ Route::get('/ngayhomnay', 'Example2Controller@ngayhomnay')->name('ngayhomnay');
 
 Route::get('/admin/danhsachsanpham/print', 'SanPhamController@print')->name('danhsachsanpham.print'); //truoc
 Route::get('/admin/danhsachsanpham/excel', 'SanPhamController@excel')->name('danhsachsanpham.excel');
+Route::get('/admin/danhsachsanpham/pdf', 'SanPhamController@pdf')->name('danhsachsanpham.pdf');
 
 Route::resource('/admin/danhsachsanpham', 'SanPhamController'); //sau: /danhsachsanpham/...
 
+
+Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+Route::post('/admin/activate/{nv_ma}', 'Backend\BackendController@activate')->name('activate');

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Danh sách sản phẩm</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,6 +10,7 @@
         }
     </style>
 </head>
+
 <body style="font-size: 10px">
     <div class="row">
         <table border="0" align="center" cellpadding="5" style="border-collapse: collapse;">
@@ -26,14 +28,20 @@
             </tr>
             <tr>
                 <td colspan="6" align="center">
-                    <img src="{{ asset('img/hinh2.png') }}" /></td>
+                    {{-- Đây là khoảng trống dùng để chèn ảnh LOGO bằng Laravel Excel --}}
+                    {{-- Khi hiển thị ảnh để xem trên WEB -> sử dụng đường dẫn URL bằng hàm asset() --}}
+                    {{-- Khi xuất file Excel, muốn chèn hình ảnh phải sử dụng đường dẫn PATH bằng hàm public_path() --}}
+                    
+                    {{-- Nếu muốn debug để xem mẫu in, bỏ comment dòng dưới đây --}}
+                    {{-- <img src="{{ asset('img/hinh2.png') }}" /> --}}
+                </td>
             </tr>
             <tr>
                 <td colspan="6" class="caption" align="center" style="text-align: center; font-size: 20px">
                     <b>Danh sách sản phẩm</b>
                 </td>
             </tr>
-            <tr style="border: 1px solid #000">
+            <tr style="border: 1px thin #000">
                 <th style="text-align: center">STT</th>
                 <th style="text-align: center">Hình sản phẩm</th>
                 <th style="text-align: center">Tên sản phẩm</th>
@@ -42,12 +50,17 @@
                 <th style="text-align: center">Loại sản phẩm</th>
             </tr>
             @foreach ($danhsachsanpham as $sp)
-            <tr style="border: 1px solid #000">
-                <td align="center" valign="middle" width="5"> 
+            <tr style="border: 1px thin #000">
+                <td align="center" valign="middle" width="5">
                     {{ $loop->index + 1 }}
                 </td>
                 <td align="center" valign="middle" width="20" height="110">
-                    <img class="hinhSanPham" src="{{ asset('storage/photos/' . $sp->sp_hinh) }}" width="100" height="100" />
+                    {{-- Đây là khoảng trống dùng để chèn ảnh LOGO bằng Laravel Excel --}}
+                    {{-- Khi hiển thị ảnh để xem trên WEB -> sử dụng đường dẫn URL bằng hàm asset() --}}
+                    {{-- Khi xuất file Excel, muốn chèn hình ảnh phải sử dụng đường dẫn PATH bằng hàm public_path() --}}
+                    
+                    {{-- Nếu muốn debug để xem mẫu in, bỏ comment dòng dưới đây --}}
+                    {{-- <img class="hinhSanPham" src="{{ asset('storage/photos/' . $sp->sp_hinh) }}" width="100" height="100" /> --}}
                 </td>
                 <td align="left" valign="middle" width="30">{{ $sp->sp_ten }}</td>
                 <td align="right" valign="middle" width="15">{{ $sp->sp_giaGoc }}</td>
@@ -60,6 +73,7 @@
             </tr>
             @endforeach
         </table>
-    </div> 
+    </div>
 </body>
+
 </html>
