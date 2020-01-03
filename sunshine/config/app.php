@@ -80,6 +80,9 @@ return [
 
     'locale' => 'en',
 
+    // Bổ sung thêm danh sách các ngôn ngữ
+    'locales' => ['en', 'vi'],
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
